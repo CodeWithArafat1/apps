@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG Mobile",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/6/64/PUBG_Mobile_cover_art.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": 4.5,
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Garena Free Fire",
+    "coverPhoto": "https://img.icons8.com/?size=100&id=7zjhdLNWyPpS&format=png&color=000000",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire offers quick 10-minute matches with intense survival shooter gameplay optimized for mobile.",
+    "ratings": 4.9,
+    "developer": "Garena"
+  },
+  {
+    "id": "3",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/0/0f/Call_of_Duty_Mobile_cover.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty Mobile brings classic FPS action, iconic maps and battle royale modes to mobile devices.",
+    "ratings": 4.4,
+    "developer": "Activision"
+  },
+  {
+    "id": "4",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/a/a2/Genshin_Impact_cover.png",
+    "category": "Action RPG",
+    "downloadLink": "https://www.hoyoverse.com/en/games/genshin",
+    "description": "Open-world action RPG with elemental combat, exploration and high-fidelity visuals on mobile.",
+    "ratings": 4.4,
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "5",
+    "title": "Subway Surfers",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/3/3c/Subway_Surfers_cover.png",
+    "category": "Endless Runner",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf",
+    "description": "Subway Surfers is a fast-paced endless runner full of colorful visuals and tight controls.",
+    "ratings": 4.6,
+    "developer": "SYBO Games"
+  },
+  {
+    "id": "6",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://img.icons8.com/?size=100&id=9zAAYb2JTKLz&format=png&color=000000",
+    "category": "Puzzle",
+    "downloadLink": "https://www.king.com/game/candycrush",
+    "description": "Match-3 puzzle game with thousands of levels and addictive combo mechanics.",
+    "ratings": 4.7,
+    "developer": "King"
+  },
+  {
+    "id": "7",
+    "title": "Among Us",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9f/Among_Us_cover_art.jpg",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
+    "description": "Multiplayer social deduction game where crewmates complete tasks while impostors sabotage.",
+    "ratings": 4.2,
+    "developer": "Innersloth"
+  },
+  {
+    "id": "8",
+    "title": "8 Ball Pool",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/2/2f/8_Ball_Pool_mobile.jpg",
+    "category": "Sports",
+    "downloadLink": "https://www.miniclip.com/games/8-ball-pool-mobile/en/",
+    "description": "Popular online pool game with multiplayer matches, tournaments and realistic physics.",
+    "ratings": 4.5,
+    "developer": "Miniclip"
+  },
+  {
+    "id": "9",
+    "title": "Royal Match",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/7/7e/Royal_Match_cover.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://www.royalmatch.com/",
+    "description": "Casual match-3 puzzle game with a story-driven castle restoration theme.",
+    "ratings": 4.4,
+    "developer": "Dream Games"
+  },
+  {
+    "id": "10",
+    "title": "Ludo King",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/8/8c/Ludo_King_Cover.png",
+    "category": "Board",
+    "downloadLink": "https://www.ludoking.com/",
+    "description": "Classic Ludo board game adapted for online multiplayer play across platforms.",
+    "ratings": 4.3,
+    "developer": "Gametion"
+  },
+  {
+    "id": "11",
+    "title": "Minecraft",
+    "coverPhoto": "https://img.icons8.com/?size=100&id=16462&format=png&color=000000",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us/store/minecraft-mobile",
+    "description": "Sandbox building and survival game with limitless creativity and procedurally generated worlds.",
+    "ratings": 4.8,
+    "developer": "Mojang"
+  },
+  {
+    "id": "12",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/3/3c/Clash_of_Clans_cover.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://www.supercell.com/en/games/clash-of-clans",
+    "description": "Village-building strategy game with clan wars, troop upgrades and competitive play.",
+    "ratings": 4.5,
+    "developer": "Supercell"
+  },
+  {
+    "id": "13",
+    "title": "Brawl Stars",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9f/Brawl_Stars_cover.png",
+    "category": "Arena Shooter",
+    "downloadLink": "https://www.supercell.com/en/games/brawl-stars",
+    "description": "Fast-paced multiplayer arena shooter with unique characters and varied game modes.",
+    "ratings": 4.6,
+    "developer": "Supercell"
+  },
+  {
+    "id": "14",
+    "title": "Mobile Legends: Bang Bang",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/e/e1/Mobile_Legends_Bang_Bang_cover.jpg",
+    "category": "MOBA",
+    "downloadLink": "https://www.mobilelegends.com/en",
+    "description": "5v5 mobile MOBA focused on teamwork, hero selection and strategic play.",
+    "ratings": 4.2,
+    "developer": "Moonton"
+  },
+  {
+    "id": "15",
+    "title": "Temple Run 2",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/f/fd/Temple_Run_2_cover.jpg",
+    "category": "Endless Runner",
+    "downloadLink": "https://www.imangi.com/temple-run-2",
+    "description": "Sequel to the endless runner classic with new obstacles, visuals and power-ups.",
+    "ratings": 4.5,
+    "developer": "Imangi Studios"
+  },
+  {
+    "id": "16",
+    "title": "Angry Birds 2",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/57/Angry_Birds_2_cover.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://www.angrybirds.com/games/angry-birds-2",
+    "description": "Physics-based puzzle game where players launch birds to topple structures and solve levels.",
+    "ratings": 4.4,
+    "developer": "Rovio Entertainment"
+  },
+  {
+    "id": "17",
+    "title": "Pokémon GO",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/4/47/Pok%C3%A9mon_GO_cover.jpg",
+    "category": "AR",
+    "downloadLink": "https://pokemongolive.com/",
+    "description": "Augmented reality mobile game that encourages real-world exploration to catch Pokémon.",
+    "ratings": 4.1,
+    "developer": "Niantic"
+  },
+  {
+    "id": "18",
+    "title": "Mario Kart Tour",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/a/a2/Mario_Kart_Tour_cover.jpg",
+    "category": "Racing",
+    "downloadLink": "https://mariokarttour.com/",
+    "description": "Mobile adaptation of Mario Kart with global tracks, karts and character roster.",
+    "ratings": 4.3,
+    "developer": "Nintendo"
+  },
+  {
+    "id": "19",
+    "title": "Hill Climb Racing",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/52/Hill_Climb_Racing_cover.png",
+    "category": "Racing",
+    "downloadLink": "https://www.fingersoft.com/hill-climb-racing",
+    "description": "Simple, addictive physics-based racing where players upgrade vehicles and climb hills.",
+    "ratings": 4.6,
+    "developer": "Fingersoft"
+  },
+  {
+    "id": "20",
+    "title": "Clash Royale",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/8/8d/Clash_Royale_cover.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://www.supercell.com/en/games/clash-royale",
+    "description": "Real-time strategy card game that combines tower defense and collectible card mechanics.",
+    "ratings": 4.5,
+    "developer": "Supercell"
+  }
+]
