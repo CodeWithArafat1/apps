@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "PUBG Mobile",
-    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/6/64/PUBG_Mobile_cover_art.jpg",
+    "coverPhoto": "https://i.pinimg.com/1200x/cc/27/2e/cc272e5581bbd170b5cf1b62f92ab5df.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
     "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Garena Free Fire",
-    "coverPhoto": "https://img.icons8.com/?size=100&id=7zjhdLNWyPpS&format=png&color=000000",
+    "coverPhoto": "https://i.pinimg.com/1200x/5b/b3/ca/5bb3caa896c55e5c36abc6979bcbd374.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://ff.garena.com/",
     "description": "Free Fire offers quick 10-minute matches with intense survival shooter gameplay optimized for mobile.",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Call of Duty: Mobile",
-    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/0/0f/Call_of_Duty_Mobile_cover.jpg",
+    "coverPhoto": "https://i.pinimg.com/1200x/07/b0/bd/07b0bd456590a01886d896d9e072c5cd.jpg",
     "category": "FPS",
     "downloadLink": "https://www.callofduty.com/mobile",
     "description": "Call of Duty Mobile brings classic FPS action, iconic maps and battle royale modes to mobile devices.",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Genshin Impact",
-    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/a/a2/Genshin_Impact_cover.png",
+    "coverPhoto": "https://i.pinimg.com/736x/40/d1/ef/40d1ef76eea4961e810f902790c85924.jpg",
     "category": "Action RPG",
     "downloadLink": "https://www.hoyoverse.com/en/games/genshin",
     "description": "Open-world action RPG with elemental combat, exploration and high-fidelity visuals on mobile.",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "title": "Ludo King",
-    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/8/8c/Ludo_King_Cover.png",
+    "coverPhoto": "https://i.pinimg.com/736x/49/b6/50/49b6500631c852724c4975f11fb6d96b.jpg",
     "category": "Board",
     "downloadLink": "https://www.ludoking.com/",
     "description": "Classic Ludo board game adapted for online multiplayer play across platforms.",

@@ -73,7 +73,7 @@ const Navbar = () => {
                         to="/profile"
                         className="block px-4 py-2 text-gray-200 hover:bg-gray-600 rounded-md"
                       >
-                        Settings
+                        Profile
                       </Link>
                     </li>
                     <li>
@@ -89,12 +89,20 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link
-              to="/auth/login"
-              className="flex items-center gap-2 bg-purple-500 px-5 cursor-pointer py-2 rounded-md text-white"
-            >
-              <FaArrowRight /> Login
-            </Link>
+            <div className="flex gap-2">
+              <Link
+                to="/auth/login"
+                className="flex items-center gap-2 bg-purple-500 px-2 md:px-5 cursor-pointer py-2 rounded-md text-white"
+              >
+                <FaArrowRight /> Login
+              </Link>
+              <Link
+                to="/auth/signup" 
+                className="md:flex hidden items-center gap-2 bg-purple-500 px-2 md:px-5 cursor-pointer py-2 rounded-md text-white"
+              >
+                <FaArrowRight /> Sign Up
+              </Link>
+            </div>
           )}
 
           <button
@@ -131,7 +139,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/all-games"
                 className="block px-3 py-2 hover:bg-gray-700 rounded-md"
               >
                 All Games
@@ -144,6 +152,14 @@ const Navbar = () => {
               >
                 Categories
               </NavLink>
+            </li>
+            <li>
+              <Link
+                to="/auth/signup" 
+                className="md:hidden flex items-center gap-2 bg-purple-500 px-2 md:px-5 cursor-pointer py-2 rounded-md text-white"
+              >
+                <FaArrowRight /> Sign Up
+              </Link>
             </li>
           </ul>
         </div>

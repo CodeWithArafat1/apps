@@ -15,7 +15,7 @@ const TopRatedGame = () => {
         Top Rated <span className="text-secondary">Games</span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3">
         {sortedGame.map((game) => (
           <GameCard {...game} key={game.id} />
         ))}

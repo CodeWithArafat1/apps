@@ -10,7 +10,7 @@ import TopRatedGame from "../components/TopRatedGame";
 import { gsap } from "gsap";
 import { Link } from "react-router";
 import Newsletter from "../components/Newsletter";
-
+import Footer from "../components/shared/Footer";
 
 const Hero = () => {
   const settings = {
@@ -23,24 +23,26 @@ const Hero = () => {
 
   const images = [slide1, slide2, slide3];
 
+  useEffect(() => {
+    gsap.set(".game-card", { opacity: 0, y: 50 });
 
-    useEffect(() => {
-      gsap.set(".game-card", { opacity: 0, y: 50 });
-  
-      gsap.to(".game-card", {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
-    }, []);
+    gsap.to(".game-card", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
+  }, []);
 
   return (
-    <div className="relative w-full mx-auto h-screen   bg-slate-900">
+    <div className="relative w-full mx-auto    bg-slate-900">
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="outline-none focus:outline-none relative game-card">
+          <div
+            key={index}
+            className="outline-none focus:outline-none relative game-card"
+          >
             <img
               src={img}
               alt={`Slide ${index + 1}`}

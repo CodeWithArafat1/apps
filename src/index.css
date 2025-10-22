@@ -4,6 +4,9 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+a.active{
+  color: #a78ff6;
+}
 
 .font-display {
   font-family: "Orbitron", sans-serif;

@@ -1,27 +1,76 @@
-import { useState } from "react";
 import { FaGoogle, FaUser } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link,  useNavigate } from "react-router";
 import Navbar from "../components/shared/Navbar";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+  updateProfile,
+} from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
-import { SET_USER } from "../reducer/reducer";
 import { useAppContext } from "../contexts/context";
+import {
+  SET_ERROR_EMAIL,
+  SET_ERROR_PASSWORD,
+  SET_USER,
+} from "../reducer/reducer";
+import { toast } from "react-toastify";
 
 const googleProvider = new GoogleAuthProvider();
 
 const SignupPage = () => {
-  const { dispatch } = useAppContext();
-  const [fullName, setFullName] = useState("");
-  const [photoUrl, setPhotoUrl] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { dispatch, passwordError, emailError } = useAppContext();
+  const navigate = useNavigate()
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    console.log("Full Name:", fullName);
-    console.log("Photo URL:", photoUrl);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const displayName = e.target.displayName.value;
+    const photoURL = e.target.photoURL.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const validator = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+    dispatch({ type: SET_ERROR_PASSWORD, payload: null });
+    dispatch({ type: SET_ERROR_EMAIL, payload: null });
+
+    if (!email.endsWith(".com")) {
+      dispatch({ type: SET_ERROR_EMAIL, payload: "Place Provide Valid Email" });
+      return;
+    }
+
+    if (password.length < 6) {
+      dispatch({
+        type: SET_ERROR_PASSWORD,
+        payload: "Password must be at least 6 characters long.",
+      });
+      return;
+    }
+
+    if (!validator.test(password)) {
+      dispatch({
+        type: SET_ERROR_PASSWORD,
+        payload:
+          "Password must contain at least one uppercase and one lowercase letter!",
+      });
+      return;
+    }
+
+    if ((password, email)) {
+      try {
+        const createUser = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        updateProfile(createUser.user, {
+          displayName,
+          photoURL,
+        });
+        toast.success("Account created successfully");
+        navigate("/");
+      } catch (err) {
+        toast.error(err.message)
+      }
+    }
   };
 
   const handleGoogleSignup = async () => {
@@ -29,6 +78,7 @@ const SignupPage = () => {
       const createUser = await signInWithPopup(auth, googleProvider);
       console.log(createUser.user);
       dispatch({ type: SET_USER, payload: createUser.user });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -43,60 +93,58 @@ const SignupPage = () => {
             Create an Account
           </h2>
 
-          {/* Signup Form */}
           <form onSubmit={handleSignup} className="space-y-4">
-            {/* Full Name */}
+     
             <div>
               <label className="block text-gray-200 mb-1">Full Name</label>
               <input
                 type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
+                name="displayName"
                 placeholder="Enter your full name"
                 className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
 
-            {/* Photo URL */}
+          
             <div>
               <label className="block text-gray-200 mb-1">Photo URL</label>
               <input
                 type="text"
-                value={photoUrl}
-                onChange={(e) => setPhotoUrl(e.target.value)}
+                name="photoURL"
                 placeholder="Enter your photo URL"
                 className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
-            {/* Email */}
+       
             <div>
               <label className="block text-gray-200 mb-1">Email</label>
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
+              {emailError && <p className="text-red-500 pt-2">{emailError}</p>}
             </div>
 
-            {/* Password */}
+            
             <div>
               <label className="block text-gray-200 mb-1">Password</label>
               <input
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                name="password"
                 placeholder="Enter your password"
                 className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
+              {passwordError && (
+                <p className="text-red-500 pt-2">{passwordError}</p>
+              )}
             </div>
 
-            {/* Signup Button */}
             <button
               type="submit"
               className="w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white font-semibold transition"
@@ -105,14 +153,12 @@ const SignupPage = () => {
             </button>
           </form>
 
-          {/* OR divider */}
           <div className="flex items-center my-4">
             <hr className="flex-grow border-gray-600" />
             <span className="px-2 text-gray-400">OR</span>
             <hr className="flex-grow border-gray-600" />
           </div>
 
-          {/* Social Signup */}
           <div className="space-y-3">
             <button
               onClick={handleGoogleSignup}
@@ -122,9 +168,8 @@ const SignupPage = () => {
             </button>
           </div>
 
-          {/* Login link */}
-          <p className="text-gray-400 mt-4 text-center">
-            Already have an account?{" "}
+          <p className="text-gray-400 mt-4 text-center flex  gap-2">
+            Already have an account?
             <Link to="/auth/login" className="text-blue-500 hover:underline">
               Login
             </Link>

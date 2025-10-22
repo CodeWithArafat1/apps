@@ -3,6 +3,7 @@ import Navbar from "../components/shared/Navbar";
 import Hero from "../pages/Hero";
 import TopRatedGame from "../components/TopRatedGame";
 import { Outlet } from "react-router";
+import Footer from "../components/shared/Footer";
 
 const Root = () => {
   return (
@@ -12,8 +13,12 @@ const Root = () => {
       </nav>
 
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

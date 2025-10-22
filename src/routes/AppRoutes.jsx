@@ -7,7 +7,10 @@ import AllGames from "../pages/AllGames";
 import Hero from "../pages/Hero";
 import NotFound from "../pages/NotFound";
 import ViewDetails from "../pages/ViewDetails";
-import Profile from "../pages/Profile";
+import Profile from "../pages/UpdateProfile";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import ViewProfile from "../pages/ViewProfile";
+import ForgotPassword from "../pages/ForgotPassword";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,8 +25,20 @@ const router = createBrowserRouter([
         Component: AllGames,
       },
       {
+        path: "/update-profile",
+        element: (
+          <PrivetRoute>
+            <Profile />
+          </PrivetRoute>
+        ),
+      },
+      {
         path: "/profile",
-        Component: Profile,
+        element: (
+          <PrivetRoute>
+            <ViewProfile />
+          </PrivetRoute>
+        ),
       },
     ],
   },
@@ -41,8 +56,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/viewDetails/:id",
-    Component: ViewDetails,
+    element: (
+      <PrivetRoute>
+        <ViewDetails />
+      </PrivetRoute>
+    ),
   },
+  {
+    path: '/auth/forgot-password',
+    Component: ForgotPassword
+  }
 ]);
 
 const AppRoutes = () => {
